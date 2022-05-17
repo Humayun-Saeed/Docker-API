@@ -37,6 +37,7 @@ pipeline{
 				bat 'docker push humayun123/testapp:0.1'
 			}
 		}
+    }    
 	// 	 stage("verify tooling") {
     //   steps {
     //     bat '''
@@ -64,7 +65,7 @@ pipeline{
     //     bat 'curl http://localhost:3000/param?query=demo | jq'
     //   }
 	//}
- }
+ 
 
 	// post {
 	// 	always {
