@@ -37,3 +37,5 @@ pipeline{
 				bat 'docker push humayun123/testapp:v0.1'
 			}
 		}
+    }
+}
