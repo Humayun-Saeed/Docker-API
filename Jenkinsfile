@@ -11,14 +11,14 @@ pipeline{
 	    stage('gitclone') {
 
 			steps {
-				git 'https://github.com/TAYYAB-IT/Docker-prac'
+				git 'https://github.com/Humayun-Saeed/Docker-API.git'
 			}
 		}
 
 		stage('Build') {
 
 			steps {
-				bat 'docker build -t tybtest90/test1:v1 .'
+				bat 'docker build -t humayun123/testapp:0.1 .'
 			}
 		}
 
@@ -34,7 +34,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				bat 'docker push tybtest90/test1:v1'
+				bat 'docker push humayun123/testapp:0.1'
 			}
 		}
 	// 	 stage("verify tooling") {
