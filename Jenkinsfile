@@ -11,14 +11,14 @@ pipeline{
 	    stage('gitclone') {
 
 			steps {
-				git 'https://github.com/Humayun-Saeed/Docker-API.git'
+				git 'https://github.com/TAYYAB-IT/Docker-prac'
 			}
 		}
 
 		stage('Build') {
 
 			steps {
-				bat 'docker build -t humayun123/testapp:v0.1 .'
+				bat 'docker build -t tybtest90/test1:v1 .'
 			}
 		}
 
@@ -29,13 +29,50 @@ pipeline{
 				bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR  --password-stdin.'
                 
 			}
-         }
+		}
 
 		stage('Push') {
 
 			steps {
-				bat 'docker push humayun123/testapp:v0.1'
+				bat 'docker push tybtest90/test1:v1'
 			}
 		}
-    }
+	// 	 stage("verify tooling") {
+    //   steps {
+    //     bat '''
+    //       docker version
+    //       docker info
+    //       docker compose version 
+    //       curl --version
+    //       jq --version
+    //     '''
+    //   }
+    // }
+    // stage('Prune Docker data') {
+    //   steps {
+    //     bat 'docker system prune -a --volumes -f'
+    //   }
+    // }
+    // stage('Start container') {
+    //   steps {
+    //     bat 'docker compose up -d --no-color --wait'
+    //     bat 'docker compose ps'
+    //   }
+    // }
+    // stage('Run tests against the container') {
+    //   steps {
+    //     bat 'curl http://localhost:3000/param?query=demo | jq'
+    //   }
+	//}
+ }
+
+	// post {
+	// 	always {
+	// 		bat 'docker compose down --remove-orphans -v'
+    //         bat 'docker compose ps'
+	// 		bat 'docker logout'
+	// 	}
+	// }
+
+
 }
