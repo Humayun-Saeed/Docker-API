@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				bat 'docker build -t humayun123/testapp:0.1 .'
+				bat 'docker build -t humayun81/testapp:0.1 .'
 			}
 		}
  
