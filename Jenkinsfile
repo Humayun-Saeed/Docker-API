@@ -26,7 +26,7 @@ pipeline{
             
 			steps {
 				//echo "${DOCKERHUB_CREDENTIALS_PSW} "
-				bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR  --password s4s5s6s7s8@'
+				bat 'docker login -u humayun81  -p s4s5s6s7s8@'
                 
 			}
 		}
