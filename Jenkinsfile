@@ -21,12 +21,12 @@ pipeline{
 				bat 'docker build -t humayun123/testapp:0.1 .'
 			}
 		}
-
+ 
 		stage('Login') {
             
 			steps {
 				//echo "${DOCKERHUB_CREDENTIALS_PSW} "
-				bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR  --password-stdin'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR  --password-stdin'
                 
 			}
 		}
