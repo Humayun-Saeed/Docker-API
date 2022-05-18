@@ -34,7 +34,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				bat 'docker push humayun123/testapp:0.1'
+				bat 'docker push humayun81/testapp:0.1'
 			}
 		}
     }    
