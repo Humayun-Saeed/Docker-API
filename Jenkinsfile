@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage('Build') {
 			steps {
-				bat 'docker build -t humayun123/test:v1 .'
+				bat 'docker build -t humayun123/testapp:0.1 .'
 			}
 		}
 		stage('Login') {
