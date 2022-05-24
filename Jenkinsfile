@@ -25,7 +25,7 @@ pipeline{
 		}
 		stage('Push') {
 			steps {
-				bat 'docker push humayun123/test1:v1'
+				bat 'docker push humayun123/testapp:0.1'
 			}
 		}
 		 stage("verify tooling") {
